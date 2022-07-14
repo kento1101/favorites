@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);header {
+  width: 100%;
+  height: 100px;
+  background-color: blue;
+}
+
+.contents-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contents-wrapper .sidebar {
+  background-color: #000;
+  color: #f7f7f7;
+  height: 100vh;
+}
+
+.contents-wrapper .heading {
+  color: aqua;
+}
+
+.icon{
+  width: 100px;
+}
+

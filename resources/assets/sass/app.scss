@@ -1,0 +1,32 @@
+//@use ;
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// // Bootstrap
+// @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+}
+
+.contents-wrapper{
+    display: flex;
+    .sidebar{
+        background-color: #000;
+        color: #f7f7f7;
+        height: 100vh;
+    }
+    .heading{
+        color: aqua;
+    }
+
+}
+
+.icon{
+    width: 100px;
+}
