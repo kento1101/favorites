@@ -13,8 +13,18 @@
             <nav class="navbar">
             </nav>
         </header>
+        <div class="sidebar">
+
+            <div><p>メニュー</p></div>
+            <div><p>お知らせ管理</p></div>
+            <div><a href="/"><p>一覧</p></a></div>
+            <div><a href="/new"><p>新規作成</p></a></div>
+
+        </div>
 
         <h1>Favorite 詳細</h1>
+
+        <img src="{{ Storage::url($favorite->image) }}" class="image">
         <table>
             <tr>
                 <th>記事番号</th>

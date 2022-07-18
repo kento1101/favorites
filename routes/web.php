@@ -11,6 +11,8 @@
 |
 */
 
+
+Route::get('/check', 'FavoriteController@checkList')->name('check');
 Route::get('/', 'FavoriteController@showList')->name('favorites');
 
 

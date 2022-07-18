@@ -22,12 +22,18 @@
                 <input name="title" placeholder="タイトルの入力欄"/>
             </div>
             <div>
+                内容：
                 <textarea name="content" placeholder="内容の入力"></textarea>
             </div>
-            <input id="image" type="file" name="image">
-
-            <input id="icon" type="file" name="icon">
-            <button>送信</button>
+            <div>
+                メイン画像：
+                <input id="image" type="file" name="image">
+            </div>
+            <div>
+                アイコン：
+                <input id="icon" type="file" name="icon">
+            </div>
+                <button>送信</button>
         </form>
         
     </body>

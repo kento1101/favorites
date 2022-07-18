@@ -12,6 +12,13 @@ use App\Models\User;
 class FavoriteController extends Controller
 {
     //
+
+
+    public function checkList(){
+        $favorites = Favorite::all();
+        return view('favorite.check_list',compact('favorites'));
+    }
+
     public function showList(){
         $favorites = Favorite::all();
         return view('favorite.list',compact('favorites'));
