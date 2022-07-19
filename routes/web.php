@@ -18,10 +18,12 @@ Route::get('/', 'FavoriteController@showList')->name('favorites');
 
 
 Route::get('/new', 'FavoriteController@create')->name('create');
-
 Route::post('/new', 'FavoriteController@store')->name('store');
 
 Route::post('/delete/{id}', 'FavoriteController@delete')->name('delete');
+
+Route::get('/edit/{id}', 'FavoriteController@edit')->name('edit');
+Route::post('/edit/{id}', 'FavoriteController@update')->name('update');
 
 Auth::routes();
 Route::get('/{id}', 'FavoriteController@detail')->name('favorite');

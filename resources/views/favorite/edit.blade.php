@@ -14,8 +14,8 @@
             </nav>
         </header>
 
-        <h1>Favorite 新規作成</h1>
-        <form action="{{ route('store') }}" method="POST" enctype="multipart/form-data">
+        <h1>Favorite 編集</h1>
+        <form action="{{ route('update') }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div>
                 タイトル：

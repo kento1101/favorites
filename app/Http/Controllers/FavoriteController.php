@@ -34,6 +34,11 @@ class FavoriteController extends Controller
         return view('favorite.create');
     }
 
+    public function edit($id){
+        $favorite = Favorite::find($id);
+        return view('favorite.edit',compact('favorite'));
+    }
+
     public function store(Request $request){
         $favorite = new Favorite;
         // $favorite->user_id = Auth::id();
@@ -49,6 +54,17 @@ class FavoriteController extends Controller
 
         $favorite->save();
         return redirect()->route('favorites');
+    }
+
+
+    public function update(Request $request, $id){
+        $favorite = Favorite::find($id);
+        $favorite->title = $request->title;
+        $favorite->content = $request->content;
+
+        $favorite->save();
+        return redirect()->route('favorites');
+
     }
 
 
