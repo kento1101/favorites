@@ -15,15 +15,15 @@
         </header>
 
         <h1>Favorite 編集</h1>
-        <form action="{{ route('update') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('update',$favorite->id) }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <div>
-                タイトル：
-                <input name="title" placeholder="タイトルの入力欄"/>
+                名前：
+                <input name="title" placeholder="名前の入力欄" value="{{ $favorite->title }}"/>
             </div>
             <div>
-                内容：
-                <textarea name="content" placeholder="内容の入力"></textarea>
+                パッシブスキル：
+                <textarea name="content" placeholder="パッシブスキルの入力">{{ $favorite->content }}</textarea>
             </div>
             <div>
                 メイン画像：

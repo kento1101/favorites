@@ -35,6 +35,7 @@
                         <th></th>
                         <th>名前</th>
                         <th></th>
+                        <th></th>
                     </tr>
                     @foreach ($favorites as $favorite)
                     <tr>
@@ -42,6 +43,9 @@
                         <td>{{$favorite->updated_at}}</td>
                         <td><a href="/{{$favorite->id}}"><img src="{{ Storage::url($favorite->icon) }}" class="icon"></a></td>
                         <td><a href="/{{$favorite->id}}">{{$favorite->title}}</a></td>
+                        <td>
+                            <a href="/edit/{{$favorite->id}}">編集</a>
+                        </td>
                         <td>
                             <form action="/delete/{{$favorite->id}}" method="POST">
                             {{ csrf_field() }}
