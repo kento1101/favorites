@@ -11,9 +11,12 @@
 |
 */
 
+Auth::routes();
+Route::get('/', 'FavoriteController@home')->name('home');
 
 Route::get('/check', 'FavoriteController@checkList')->name('check');
-Route::get('/', 'FavoriteController@showList')->name('favorites');
+Route::get('/history', 'FavoriteController@history')->name('history');
+Route::get('/index', 'FavoriteController@showList')->name('favorites');
 
 
 
@@ -25,7 +28,8 @@ Route::post('/delete/{id}', 'FavoriteController@delete')->name('delete');
 Route::get('/edit/{id}', 'FavoriteController@edit')->name('edit');
 Route::post('/edit/{id}', 'FavoriteController@update')->name('update');
 
-Auth::routes();
 Route::get('/{id}', 'FavoriteController@detail')->name('favorite');
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');

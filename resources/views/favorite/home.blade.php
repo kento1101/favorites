@@ -19,6 +19,7 @@
                 </ul>
             </nav>
         </header>
+
         <div class="contents-wrapper">
             <div class="sidebar">
 
@@ -29,27 +30,19 @@
                 <div class="sidebar_item"><a href="/new"><p>新規作成</p></a></div>
             
             </div>
-            <div class="main-contents">
-                <h1 class="heading">Favorite 一覧</h1>
 
-                <img src="{{ Storage::url($favorite->image) }}" class="image">
-                <table>
-                    <tr>
-                        <th>記事番号</th>
-                        <th>日付</th>
-                        <th>タイトル</th>
-                        <th>内容</th>
-                    </tr>
-                    
-                    <tr>
-                        <td>{{$favorite->id}}</td>
-                        <td>{{$favorite->updated_at}}</td>
-                        <td>{{$favorite->title}}</td>
-                        <td>{{$favorite->content}}</td>
-                    </tr>
-                    
-                </table>
+            <div class="main-contents">
+                <h1 class="heading">TOP</h1>
+                <div class="home-main">
+                    <img src="{{ Storage::url($favorite->image) }}" class="home-main-image">
+                </div>
+
+                <h2>新着キャラクター</h2>
+                
             </div>
         </div>
-    </body>
+        </body>
 </html>
+
+
+<script src="{{ mix('js/sample.js') }}"></script>

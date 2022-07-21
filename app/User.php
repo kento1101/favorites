@@ -26,14 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-     /**
-     * リレーション（1対多）
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function favorites() // 複数形
-    {
-        return $this->hasMany('App\Favorite');
-    }
 }

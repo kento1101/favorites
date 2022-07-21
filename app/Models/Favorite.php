@@ -23,7 +23,7 @@ class Favorite extends Model
      */
     public function user() // 単数形
     {
-        return $this->belongsTo('App\User');
+        // return $this->belongsTo('App\User');
     }
 
 }

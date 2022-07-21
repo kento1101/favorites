@@ -12,11 +12,18 @@ use App\Models\User;
 class FavoriteController extends Controller
 {
     //
-
+    public function home(){
+        $favorite = Favorite::inRandomOrder()->first();
+        return view('favorite.home',compact('favorite'));
+    }
 
     public function checkList(){
         $favorites = Favorite::all();
         return view('favorite.check_list',compact('favorites'));
+    }
+    public function history(){
+        $favorites = Favorite::all();
+        return view('favorite.history',compact('favorites'));
     }
 
     public function showList(){
