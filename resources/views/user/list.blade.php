@@ -29,21 +29,42 @@
                 <div class="sidebar_item"><a href="/index"><p>一覧</p></a></div>
                 <div class="sidebar_item"><a href="/new"><p>新規作成</p></a></div>
                 <div class="sidebar_item"><a href="/users"><p>ユーザー一覧</p></a></div>
-
             
             </div>
 
             <div class="main-contents">
-                <h1 class="heading">Favorite 一覧</h1>
+                <h1 class="heading">User 一覧</h1>
             
-            
-                    @foreach ($favorites as $favorite)
+                <table>
                     <tr>
-                    
-                        <td><a href="/{{$favorite->id}}"><img src="{{ Storage::url($favorite->icon) }}" class="icon"></a></td>
-                        
+                        <th>ID</th>
+                        <th>日付</th>
+                        <th></th>
+                        <th>名前</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    @foreach ($users as $user)
+                    <tr>
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->updated_at}}</td>
+                        <td>{{$user->name}}</td>
+                        <td>
+                            {{-- <a href="/edit/{{$favorite->id}}">編集</a> --}}
+                        </td>
+                        <td>
+                            {{-- <form action="/delete/{{$favorite->id}}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="submit" value="削除">
+                            </form> --}}
+                        </td>
+                    </tr>
                     @endforeach
+                </table>
             </div>
         </div>
         </body>
 </html>
+
+
+<script src="{{ mix('js/sample.js') }}"></script>

@@ -27,6 +27,8 @@
                 <div class="sidebar_menu"><p>管理者メニュー</p></div>
                 <div class="sidebar_item"><a href="/index"><p>一覧</p></a></div>
                 <div class="sidebar_item"><a href="/new"><p>新規作成</p></a></div>
+                <div class="sidebar_item"><a href="/users"><p>ユーザー一覧</p></a></div>
+
             
             </div>
             <div class="main-contents">

@@ -14,6 +14,8 @@
 Auth::routes();
 Route::get('/', 'FavoriteController@home')->name('home');
 
+Route::get('/users', 'UserController@users')->name('users');
+
 Route::get('/check', 'FavoriteController@checkList')->name('check');
 Route::get('/history', 'FavoriteController@history')->name('history');
 Route::get('/index', 'FavoriteController@showList')->name('favorites');
