@@ -22,11 +22,8 @@
 
         <div class="contents-wrapper">
             <div class="sidebar">
-
-                <div class="sidebar_item"><a href="/check"><p>所持率チェック</p></a></div>
-                <div class="sidebar_item"><p>???</p></div>
                 <div class="sidebar_menu"><p>管理者メニュー</p></div>
-                <div class="sidebar_item"><a href="/index"><p>一覧</p></a></div>
+                <div class="sidebar_item"><a href="/index"><p>戦士一覧</p></a></div>
                 <div class="sidebar_item"><a href="/new"><p>新規作成</p></a></div>
                 <div class="sidebar_item"><a href="/users"><p>ユーザー一覧</p></a></div>
 
@@ -34,15 +31,18 @@
             </div>
 
             <div class="main-contents">
-                <h1 class="heading">Favorite 一覧</h1>
-            
-            
+                <div class="main-contents-inner">
+                    <div class="heading-wrap">
+                        <h1 class="heading">Favorite 一覧</h1>
+                        <button class="btn check-save-btn">保存</button>
+                    </div>
+
                     @foreach ($favorites as $favorite)
-                    <tr>
                     
                         <td><a href="/{{$favorite->id}}"><img src="{{ Storage::url($favorite->icon) }}" class="icon"></a></td>
                         
                     @endforeach
+                </div>
             </div>
         </div>
         </body>

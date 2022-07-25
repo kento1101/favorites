@@ -13,8 +13,10 @@ class FavoriteController extends Controller
 {
     //
     public function home(){
-        $favorite = Favorite::inRandomOrder()->first();
-        return view('favorite.home',compact('favorite'));
+        // $favorite = Favorite::inRandomOrder()->first();
+        $favorites = Favorite::inRandomOrder()->take(3)->get();
+
+        return view('favorite.home',compact('favorites'));
     }
 
     public function checkList(){
@@ -52,6 +54,8 @@ class FavoriteController extends Controller
         $favorite->user_id = 1;
         $favorite->title = $request->title;
         $favorite->content = $request->content;
+        $favorite->type = $request->type;
+        $favorite->group = $request->group;
         
         $filename=$request->file('image')->store('public'); //storageフォルダに投稿した画像を保存しファイルパスを格納
         $favorite->image=str_replace('public/','',$filename);
@@ -68,6 +72,8 @@ class FavoriteController extends Controller
         $favorite = Favorite::find($id);
         $favorite->title = $request->title;
         $favorite->content = $request->content;
+        $favorite->type = $request->type;
+        $favorite->group = $request->group;
 
         $favorite->save();
         return redirect()->route('favorites');

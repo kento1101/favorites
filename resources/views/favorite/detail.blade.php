@@ -21,36 +21,31 @@
         </header>
         <div class="contents-wrapper">
             <div class="sidebar">
-
-                <div class="sidebar_item"><a href="/check"><p>所持率チェック</p></a></div>
-                <div class="sidebar_item"><p>???</p></div>
                 <div class="sidebar_menu"><p>管理者メニュー</p></div>
-                <div class="sidebar_item"><a href="/index"><p>一覧</p></a></div>
+                <div class="sidebar_item"><a href="/index"><p>戦士一覧</p></a></div>
                 <div class="sidebar_item"><a href="/new"><p>新規作成</p></a></div>
                 <div class="sidebar_item"><a href="/users"><p>ユーザー一覧</p></a></div>
 
             
             </div>
             <div class="main-contents">
-                <h1 class="heading">Favorite 一覧</h1>
+                <div class="main-contents-inner">
+                    <h1 class="heading">{{$favorite->title}}</h1>
 
-                <img src="{{ Storage::url($favorite->image) }}" class="image">
-                <table>
-                    <tr>
-                        <th>記事番号</th>
-                        <th>日付</th>
-                        <th>タイトル</th>
-                        <th>内容</th>
-                    </tr>
-                    
-                    <tr>
-                        <td>{{$favorite->id}}</td>
-                        <td>{{$favorite->updated_at}}</td>
-                        <td>{{$favorite->title}}</td>
-                        <td>{{$favorite->content}}</td>
-                    </tr>
-                    
-                </table>
+                    <div class="favorite-wrap">
+                        <img src="{{ Storage::url($favorite->image) }}" class="image">
+                        <div class="favorite-data-section">
+                            <p>パッシブスキル</p>
+                            <p>リーダースキル</p>
+                            <p>アクティブスキル</p>
+                            <p>必殺技効果</p>
+                            <p>超必殺技効果</p>
+                            <p>カテゴリ</p>
+                            <p>リンク</p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

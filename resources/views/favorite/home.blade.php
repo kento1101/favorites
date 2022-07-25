@@ -32,13 +32,19 @@
             </div>
 
             <div class="main-contents">
-                <h1 class="heading">TOP</h1>
-                <div class="home-main">
-                    <img src="{{ Storage::url($favorite->image) }}" class="home-main-image">
-                </div>
+                <div class="main-contents-inner">
+                    <h1 class="heading">TOP</h1>
 
-                <h2>新着キャラクター</h2>
-                
+                    <div class="home-main-wrap">
+                        @foreach ($favorites as $favorite)
+                            <div class="home-main">
+                                <img src="{{ Storage::url($favorite->image) }}" class="home-main-image">
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <h2>新着キャラクター</h2>
+                </div>
             </div>
         </div>
         </body>
